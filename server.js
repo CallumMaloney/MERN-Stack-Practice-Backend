@@ -8,7 +8,7 @@ mongoose.connect(process.env.DB_URL, { useNewUrlParser: true }) // Connect to DB
 const db = mongoose.connection
 
 db.once('open', () =>  // Once connection is open, log to console
-console.log('Connected!')
+console.log('Connected!!')
 )
 
 db.on('error', (error) => // If there is an error on connection, log to console
