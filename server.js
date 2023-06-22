@@ -4,6 +4,11 @@ const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 
+const cors = require('cors'); 
+app.use(cors({ // Allow cross-origin requests
+    origin: 'http://localhost:3001' 
+  }));
+
 mongoose.connect(process.env.DB_URL, { useNewUrlParser: true }) // Connect to DB using URL from .env file
 const db = mongoose.connection
 
